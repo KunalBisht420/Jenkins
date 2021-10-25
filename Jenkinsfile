@@ -7,6 +7,11 @@ pipeline {
     }
     agent any
     stages {
+        stage('Cloning Git') {
+            steps {
+                git 'https://github.com/KunalBisht420/Jenkins.git'
+            }
+        }
         stage('Test') {
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
