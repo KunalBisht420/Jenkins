@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  dev:
+    container_name: container_created_by_docker_compose
+    image: image_created_by_docker_compose
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
